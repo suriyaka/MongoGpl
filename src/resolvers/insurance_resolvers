@@ -1,0 +1,8 @@
+import { InsuranceResolvers, Insurance } from '../generated/graphql';
+
+export const insuranceResolvers: InsuranceResolvers = {
+    insurance: async ({ insurance: { id } }, _, { dbClient }) => {
+    const insurance = await dbClient.getInsurances(id);
+    return insurance as Insurance;
+  },
+};

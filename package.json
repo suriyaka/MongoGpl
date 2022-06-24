@@ -1,0 +1,42 @@
+{
+    "name": "mongodbgql",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "type": "module",
+    "keywords": [
+        "mongodb",
+        "typescript",
+        "express",
+        "atlas"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prestart": "npm run build",
+        "generate": "graphql-codegen --config codegen.yml",
+        "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier . --write"
+    },
+    "dependencies": {
+        "@graphql-codegen/add": "^3.1.1",
+        "@graphql-codegen/cli": "^2.6.2",
+        "@graphql-codegen/introspection": "^2.1.1",
+        "@graphql-codegen/typescript": "^2.5.1",
+        "@graphql-codegen/typescript-resolvers": "^2.6.6",
+        "apollo-server": "^3.9.0",
+        "apollo-server-express": "^3.9.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.18.1",
+        "graphql": "^16.5.0",
+        "graphql-tag": "^2.12.6",
+        "mongodb": "^4.7.0",
+        "uuidv4": "^6.2.13"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/node": "^16.4.7",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.3.5",
+        "prettier": "^2.3.2"
+    }
+}

@@ -1,0 +1,23 @@
+ type Query {
+       getInsurance: [Insurance!]!
+       getaccounts:[Account!]!
+   }
+
+type Mutation {
+  createInsurance(Fullname: String!, Profession:String!, mobile:String!): Insurance!
+  createaccount(Companyname:String!,Salary:String!,address:String!): Account!
+}
+
+type Insurance {
+     id: ID!
+     Fullname: String!,
+     Profession:String!
+     mobile:String!
+ }
+
+ type Account{
+    Companyname:String!
+    Salary:String!
+    address:String!
+ }
+
